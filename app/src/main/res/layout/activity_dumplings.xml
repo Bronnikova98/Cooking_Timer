@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".DumplingsActivity">
 
     <ScrollView
@@ -13,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/header"
@@ -34,7 +35,7 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="300dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
@@ -61,8 +62,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:gravity="center"
-                android:text="Необходимые ингридиенты:"
+                android:background="#CDEBED"
+                android:text="Необходимые ингредиенты:"
                 android:textColor="#000000" />
 
             <TextView
@@ -71,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:gravity="center"
+                android:background="#EAF5F6"
                 android:text="Вода"
                 android:textColor="#000000" />
 
@@ -81,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:gravity="center"
+                android:background="#EAF5F6"
                 android:text="Пельмени"
                 android:textColor="#000000" />
 
@@ -91,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:gravity="center"
+                android:background="#EAF5F6"
                 android:text="Соль"
                 android:textColor="#000000" />
 
@@ -112,34 +113,93 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 2. Посолите воду" />
+                android:text="Шаг 2. Посолите воду"
+                android:textColor="#000000" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView10"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
+                android:layout_marginRight="20dp"
+                android:text="Шаг 3. Опустите пельмени в кипящую воду. Помешивая, варите 8 мин."
+                android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:text="TextView" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
 
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    android:text="Button" />
-            </LinearLayout>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="08:00"
+                        android:textColor="#4CAF50"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#4CAF50"
+                        android:text="Начать" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/myTime"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minHeight="48dp"
+                        android:text="00:00"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#A1D7DD"
+                        android:text="Сброс" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Шаг 4. Достаньте пельмени из воды и поместите на тарелку. Приятного аппетита!"
+                android:textColor="#000000" />
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
