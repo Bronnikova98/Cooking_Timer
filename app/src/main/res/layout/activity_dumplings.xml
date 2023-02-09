@@ -17,11 +17,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/header"
+                android:id="@+id/headerDumplings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:text="Пельмени"
                 android:textColor="#000000"
@@ -194,7 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="Введите время в формате xx:xx"
+                android:text="Введите время в числовом формате хх:хх"
                 android:textColor="#5E0000"
                 android:visibility="invisible" />
 
@@ -203,10 +204,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:text="Шаг 4. Достаньте пельмени из воды и поместите на тарелку. Приятного аппетита!"
                 android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Вернуться к списку рецептов" />
 
         </LinearLayout>
     </ScrollView>

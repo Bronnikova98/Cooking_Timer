@@ -23,6 +23,7 @@ import android.os.Handler;
 
 public class DumplingsActivity extends AppCompatActivity {
 
+    private Button backMain;
     private TextView timerView;
     private MyTimer timer;
     private Button start;
@@ -39,6 +40,7 @@ public class DumplingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dumplings);
 
+        backMain = findViewById(R.id.back);
         timerView = findViewById(R.id.textView8);
         start = findViewById(R.id.button4);
         reset = findViewById(R.id.button5);
@@ -75,7 +77,7 @@ public class DumplingsActivity extends AppCompatActivity {
                 timerView.setTextColor(Color.parseColor("#4CAF50"));
                 if (timer != null){
                     timer.cancel();}
-                timerView.setText("00:10");
+                timerView.setText("08:00");
 
                 exceptionText.setVisibility(View.INVISIBLE);
 
@@ -114,6 +116,14 @@ public class DumplingsActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             notificationManager.createNotificationChannel(channel);
         }
+
+        backMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DumplingsActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -156,7 +166,7 @@ public class DumplingsActivity extends AppCompatActivity {
 
                     notificationManager.notify(NOTIFY_ID, builder.build());
                 }
-            }, 5000);
+            }, 1000);
 
         }
     }
